@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/answer" method="POST"></form>
+    <!-- #????? -->
+    {% for choice in question.choices %}   
+    <label for="answer">{{question}}</label> 
+    <!-- this is what I had originally. needs variable instead of 'yes' and 'no' -->
+    <!-- <button type="radio" name="answer">Yes</button>
+    <button type="radio" name="answer">No</button> -->
+    <p></p><input type="radio" name="answer" value="{{choice}}">{{choice}}</p>
+    {% endfor %}
+    <button>Continue</button>
+</body>
+</html>
